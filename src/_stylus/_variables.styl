@@ -1,0 +1,20 @@
+bg-color = #fff
+txt-color = #000
+content-width = 1000px
+
+sp()
+  @media screen and (max-width: 480px) 
+    {block}
+
+tb()
+  @media screen and (max-width: 1024px) 
+    {block}
+
+/*                                      */
+/*           上下左右中央揃え              */
+/*                                      */
+flex-center = @block {
+  display flex
+  justify-content center
+  align-items center
+}

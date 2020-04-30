@@ -1,0 +1,20 @@
+.top {
+  margin: 0 auto;
+  height: 400px;
+  max-width: 1000px;
+}
+.main {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.content {
+  background: #ffc0cb;
+  margin: 32px 0;
+}
+.content__tag {
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid #000;
+}
+.content__ttl {
+  font-size: 24px;
+}

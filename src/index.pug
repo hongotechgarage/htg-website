@@ -1,22 +1,15 @@
 doctype html
 html(lang="ja")
   head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width,initial-scale=1")
-    meta(hid="description" name="description" content="東京大学本郷テックガレージの紹介です。")
-    meta(hid='og:site_name' property='og:site_name' content='東京大学本郷テックガレージ')
-    meta(hid='og:type' property='og:type' content='website')
-    meta(hid='og:url' property='og:url' content='https://2020.todaitotexas.com/')
-    meta(hid='og:title' property='og:title' content='東京大学本郷テックガレージ')
-    meta(hid='og:description' property='og:description' content='東京大学本郷テックガレージの紹介です。')
-    meta(hid='og:image' property='og:image' content='~/assets/ogp.jpg')
-    link(rel="stylesheet" href="css/common.css")
-    link(rel="canonical" href="")
-    title 東京大学 本郷テックガレージ
+    include component/_head
+    link(rel="stylesheet" href="css/index.css")
+
   body
-    h1#sitettl HONGO TECH GARAGE
-    p 本郷テックガレージは東京大学の学生が技術的なサイドプロジェクトを行うための秘密基地です。
-    p 東京大学 産学協創推進本部の下部組織として、学外にプログラミングや工作用のスペースを用意しています。
+    include component/_header
+    .top
+      h1#sitettl HONGO TECH GARAGE
+      p 本郷テックガレージは東京大学の学生が技術的なサイドプロジェクトを行うための秘密基地です。
+      p 東京大学 産学協創推進本部の下部組織として、学外にプログラミングや工作用のスペースを用意しています。
     main.main
       .content
         span.content__tag 01 POLICY
@@ -33,8 +26,4 @@ html(lang="ja")
         h2.content__ttl サービスと環境
         p 本郷テックガレージは、プロジェクトを行う学生のための施設です。もし利用したい場合はプロジェクト申請を行ってください。メンバーでない方のご利用はご遠慮願っています。
         p また社会人の皆様のご利用、ご見学はかたくお断りしています。
-    footer.footer.sample
-        h2 ACCESS
-        h2.content__ttl 学生の利用に関して
-        p 本郷テックガレージは、プロジェクトを行う学生のための施設です。もし利用したい場合はプロジェクト申請を行ってください。メンバーでない方のご利用はご遠慮願っています。
-        p また社会人の皆様のご利用、ご見学はかたくお断りしています。
+    include component/_footer

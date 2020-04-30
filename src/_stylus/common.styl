@@ -1,10 +1,56 @@
-main-color = #fff
-txt-color = #000
+@import "_variables.styl"
 
 html
-    background main-color
-    color txt-color
-.sample
-    color #f00
-    p
-        margin-bottom 16px
+  font-family 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+  font-size 14px
+  word-spacing 1px
+  line-height 21px
+  -ms-text-size-adjust 100%
+  -webkit-text-size-adjust 100%
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
+  box-sizing border-box
+  background bg-color
+  color txt-color
+
+html.index, html.index>body 
+  -ms-scroll-chaining none
+  overscroll-behavior none
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  width 100%
+  height 100%
+  overflow hidden
+body
+  margin 0
+
+a
+  text-decoration none
+
+p 
+  margin 0
+
+/* for debug */
+// * 
+//   border 1px solid blue
+
+.header 
+  width 100%
+  height 80px
+  {flex-center}
+  background gray
+.menu
+  display flex 
+  flex-direction row
+  list-style none
+
+.footer-container
+  background txt-color
+  width 100%
+.footer
+  margin 0 auto
+  max-width content-width
+  color bg-color
