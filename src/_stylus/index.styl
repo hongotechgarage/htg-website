@@ -2,17 +2,29 @@
 
 .top 
     margin 0 auto
-    height 400px
+    height calc(100vh - 120px)
     max-width content-width
+    display flex
+    justify-content space-between
+    align-items center
 
 .main
     margin 0 auto
     max-width content-width
+    padding 16px 0
 .content
-    background pink
     margin 32px 0
     &__tag
         letter-spacing .2em
         border-bottom 1px solid txt-color
     &__ttl
         font-size 24px
+
++tb()
+    .top
+        margin 0 16px
+        &__img
+            width 50%
+
+    .main
+        margin 0 16px

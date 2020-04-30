@@ -1,10 +1,40 @@
 doctype html
 html(lang="ja")
   head
-    include component/_head
-    link(rel="stylesheet" href="css/page.css")
+    include _component/_head
+    link(rel="stylesheet" href="/assets/css/page.css")
   body
-    include component/_header
-    main.main
-      h2 page
-    include component/_footer
+    include _component/_header
+    main.page
+      h2.page__ttl PROJECT
+      h3 技術プロジェクトの新規応募を受付中
+      p 本郷テックガレージでは、誰かの課題を解決する技術系プロジェクトの新規応募を受け付けています。
+      p 承認が降りた場合、支援金や工作機械、作業場所、数十万円分のクラウド環境が利用可能になります。
+      p プロジェクトにはいくつかの種類を用意しています。
+      ul
+        li Project Fund (1 ヶ月間ぐらいのプロジェクト)
+        li Founders Program (夏休み/春休みのプロジェクト)
+      h4 1. Project Fund
+      p 約一ヶ月間のプロジェクト支援金です。
+      p 4 万円までの支援金を使って、ある程度アイデアが定まった技術的なプロジェクトを進めていただけます。なお、期間中のピボット（方向転換）も許可しています。
+      p Spring Founders Program実施中のため、現在募集を停止しています。再開は、2020年3月を予定しています。 -> Project Fund 申請フォーム
+      h4 2. 長期休み限定の Summer / Spring Founders Program (SFP)
+      p 夏休みと春休みに行われる、数十万円を支援するプログラムとして SFP を設けています。開発からデプロイまでを実施いただきます。
+      p それぞれ夏休み前と春休み前に、産学協創推進本部の Web ページで募集しています。
+      p なお、 Project Fund に採択されたプロジェクトも SFP に応募いただけます。
+      h3 アイデアを考える際に
+      p テックガレージでは以下のようなアイデアを支援したいと考えています。
+      p たくさんのユーザーがほどほどに好きなアイデアよりも、ほんの少しのユーザーが深く愛してくれるようなアイデア（自分がとても欲しいものも含む）
+      p 自分の身近な人や自分の困り事を解決するようなもの
+      p これまでできなかったけれど、今ならできるアイデア
+      p まっとうなアイデアよりも、聞いたことも見たこともないアイデア
+      p これまでと違う差別化や新規性のあるもの
+      p 世間の流行りから少し離れた、新しい領域への挑戦
+      p つまり、まだ誰も信じていない、自分だけが知っている秘密に基づくアイデアをお待ちしています。
+      p なお、以下のようなアイデアはテックガレージの支援の範疇ではありません。
+      ul
+        li 顧客の存在しないメディアアート
+        li 想像上のユーザーの、想像上のニーズに基づくプロダクト
+        li テクノロジの関わらないサービス
+        li ビジネス主体のプロダクト
+    include _component/_footer

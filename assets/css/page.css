@@ -1,0 +1,10 @@
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.page__tag {
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid #000;
+}
+/*# sourceMappingURL=page.css.map */

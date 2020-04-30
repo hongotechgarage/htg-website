@@ -1,15 +1,16 @@
 doctype html
 html(lang="ja")
   head
-    include component/_head
-    link(rel="stylesheet" href="css/index.css")
-
+    include _component/_head
+    link(rel="stylesheet" href="/assets/css/index.css")
   body
-    include component/_header
+    include _component/_header
     .top
-      h1#sitettl HONGO TECH GARAGE
-      p 本郷テックガレージは東京大学の学生が技術的なサイドプロジェクトを行うための秘密基地です。
-      p 東京大学 産学協創推進本部の下部組織として、学外にプログラミングや工作用のスペースを用意しています。
+      .top__txt
+        h1#sitettl HONGO TECH GARAGE
+        p 本郷テックガレージは東京大学の学生が技術的なサイドプロジェクトを行うための秘密基地です。
+        p 東京大学 産学協創推進本部の下部組織として、学外にプログラミングや工作用のスペースを用意しています。
+      img.top__img(src="/assets/img/main-img.png")
     main.main
       .content
         span.content__tag 01 POLICY
@@ -21,9 +22,17 @@ html(lang="ja")
         h2.content__ttl 募集アイデアについて
         p 本郷テックガレージでは、逆張りのアイデアをもとにした、ソフトウェアやハードウェアを作る技術プロジェクトを募集、支援しています。
         p 詳しくはプロジェクトのページをご覧ください。
+        a(href="/project") more
       .content
         span.content__tag 03 ENVIRONMENT
         h2.content__ttl サービスと環境
         p 本郷テックガレージは、プロジェクトを行う学生のための施設です。もし利用したい場合はプロジェクト申請を行ってください。メンバーでない方のご利用はご遠慮願っています。
         p また社会人の皆様のご利用、ご見学はかたくお断りしています。
-    include component/_footer
+        a(href="/environment") more
+      .content
+        h2.content__ttl メーリングリスト
+        p メーリングリストでは随時ガレージの情報をアップデートしています。
+        button 本郷テックガレージのメーリングリストへの登録
+        button お問い合わせはこちら→
+    include _component/_footer
+    script(type="text/javascript" src="/assets/js/index.js")
