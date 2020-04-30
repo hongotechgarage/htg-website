@@ -1,0 +1,10 @@
+html {
+  background: #fff;
+  color: #000;
+}
+.sample {
+  color: #f00;
+}
+.sample p {
+  margin-bottom: 16px;
+}
