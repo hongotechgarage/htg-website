@@ -30,11 +30,54 @@
         font-size 26px
     &__link
         {font-style}
+    p 
+        text-align justify
+
 +tb()
     .top
-        margin 0 16px
+        margin 0 24px
         &__img
             width 50%
+            margin 40vh auto 220px
+        &__txt
+            width 50%
+            margin 0 auto
 
     .main
-        margin 0 16px
+        margin 0 24px 120px
+        width calc(100% - 48px)
+
++sp()
+    .top
+        &__img
+            width 55%
+        &__txt
+            position absolute
+            left 24px
+            bottom 24px
+            text-align justify
+
+            margin 0
+            width 60%
+            line-height 1.8em
+    .main
+        margin 0
+    .content
+        width 100%
+        margin 0
+        padding 40px 24px
+        border none 
+        border-top 1px solid txt-color
+        border-radius 0
+        &__tag
+            font-size 14px
+        &__ttl
+            font-size 22px
+            margin 16px 0
+        &__link
+            { link }
+            background sub-color
+            display inline-block
+            margin-top 16px
+        &:last-child
+            margin-bottom 80px

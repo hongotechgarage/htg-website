@@ -14,75 +14,155 @@
     &__tag
         letter-spacing .2em
         border-bottom 1px solid txt-color
+    h3 
+        font-size 24px
+        line-height 1.6em
+    h4
+        line-height 1.4em
+    p 
+        text-align justify
     .group
         margin-bottom 120px
         .link
             background sub-color
 
-    .program
-        display flex 
-        justify-content space-between
-        &__item
-            display flex
+    &.project
+        .program
+            display flex 
             justify-content space-between
-            flex-direction column
-            width "calc((%s - 32px)/2 - 80px)" % content-width
-            border 1px solid txt-color
-            border-radius 4px
-            padding 40px
-            margin-top 24px
-            h4 
-                margin 0 0 24px
-                font-size 20px
-            a   
-                margin-top 16px
-        // .link
-        //     width 50%
-    .ok-ideas
-        padding 0
-        li
-            padding 12px
-            border 1px solid txt-color
-            border-radius 4px
-            list-style none
-            margin 16px 0
-    .ng-ideas
-        padding 0
-        li
-            list-style none
-            margin 8px 0
-            &::before, &::after
-	            content ''
-	            display block
-	            position absolute
-                top 8px
-                left 3px
-                height 4px 
-                width 14px
-                background #aaa
-                transform rotate(-45deg)
-                -webkit-transform rotate(-45deg)
-                -o-transform rotate(-45deg)
-            &::after
-                transform rotate(45deg)
-                -webkit-transform rotate(45deg)
-                -o-transform rotate(45deg)
+            &__item
+                display flex
+                justify-content space-between
+                flex-direction column
+                width "calc((%s - 32px)/2 - 80px)" % content-width
+                border 1px solid txt-color
+                border-radius 4px
+                padding 40px
+                margin-top 24px
+                h4 
+                    margin 0 0 24px
+                    font-size 20px
+                a   
+                    margin-top 16px
+            .link
+                margin-bottom 0
+                // width 50%
+        .ok-ideas
+            padding 0
+            li
+                padding 12px
+                border 1px solid txt-color
+                border-radius 4px
+                list-style none
+                margin 16px 0
+        .ng-ideas
+            padding 8px 0 8px 24px
+            li
+                list-style none
+                margin 8px 0
+                position relative
+                &::before, &::after
+                    content ''
+                    display block
+                    position absolute
+                    top 9.2px
+                    left -24px
+                    height 1px 
+                    width 14px
+                    background txt-color
+                    transform rotate(-45deg)
+                    -webkit-transform rotate(-45deg)
+                    -o-transform rotate(-45deg)
+                &::after
+                    transform rotate(45deg)
+                    -webkit-transform rotate(45deg)
+                    -o-transform rotate(45deg)
+        .projects-list
+            padding 0 0 0 24px
 
-    h3 
-        font-size 24px
-    .access-imgs
-        display flex
-        flex-wrap wrap
-        justify-content space-between
-        margin-top 24px
-        img
-            width "calc( (%s - 64px) /3)" % content-width
-            margin-bottom 32px
-    
     &.environment
         .group
             margin-bottom 48px
+            &:last-child
+                margin-bottom 120px
+
         h4 
             font-weight bold
             font-size 12px
             margin 36px 0 8px
+    &.access
+        .guide
+            display flex
+            flex-wrap wrap
+            justify-content space-between
+            margin-top 24px
+            img
+                width "calc( (%s - 64px) /3)" % content-width
+                margin-bottom 32px
+    
+
++tb()
+    .page
+        margin 0 24px
+        &.project
+            .program
+                flex-direction column
+                &__item
+                    border-radius 8px
+                    width calc(100% - 80px)
+        &.environment
+            h4
+                margin 16px 0 8px
+        &.access
+            .guide
+                img
+                    width calc( (100% - 16px) /2)
+                    margin-bottom 16px
+
++sp()
+    .page
+        margin 0
+        &__ttl
+            margin 96px auto 48px
+            background sub-color
+            padding 32px 24px
+            text-align left
+            .en 
+                font-size 16px
+                margin-bottom 8px
+            .jp
+                margin-top 8px
+                font-size 20px
+        .group
+            padding 0 24px
+        
+        &.project
+            .program
+                &__item
+                    border-radius 4px
+                    padding 48px 24px
+                    width calc(100% - 48px)
+            .ok-ideas
+                li
+                    font-size 12px
+            .ng-ideas
+                li
+                    font-size 12px
+            .projects-list
+                padding 16px 0 16px 24px
+        &.environment
+            h3 
+                margin 8px 0
+        &.access
+            .link
+                margin 16px 0
+            .guide
+                img
+                    width 100%
+                    margin-bottom 24px
+
+
+
+
+
+

@@ -95,6 +95,7 @@ h5 {
   position: relative;
   width: 40px;
   height: 20px;
+  display: none;
 }
 .menu-trigger span {
   position: absolute;
@@ -184,16 +185,75 @@ h5 {
 .link:hover {
   color: #acacac;
 }
+.top-button {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .header {
     height: 80px;
-    margin: 0 16px;
+    padding: 0 24px;
+    width: calc(100% - 48px);
   }
   .logo {
     width: 80px;
   }
-  .footer {
-    margin: 0 16px;
+  .footer-container {
+    padding: 16px 24px 0;
+  }
+  .footer__part {
+    border: none;
+  }
+  .footer__part:first-child {
+    flex-basis: calc(100% / 3 * 2);
+  }
+  .footer__part:nth-of-type(2) {
+    flex-basis: calc(100% / 3);
+    padding: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu-trigger {
+    display: initial;
+  }
+  .menu {
+    display: none;
+  }
+  .footer-container {
+    padding: 0;
+  }
+  .footer__part {
+    padding: 16px 24px;
+  }
+  .footer__part:first-child {
+    flex-basis: 100%;
+  }
+  .footer__part:first-child .footer__part__txt {
+    width: 100%;
+  }
+  .footer__part:nth-of-type(2) {
+    border-top: 1px solid #262626;
+    flex-basis: 100%;
+    padding: 16px 24px;
+  }
+  .footer .copyright {
+    padding: 16px 24px;
+  }
+  .footer .link {
+    margin: 16px 0 24px;
+  }
+  .top-button {
+    display: initial;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    background: #262626;
+    color: #f4f4f4;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @keyframes menu-bar01 {

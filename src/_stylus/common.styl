@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5
 
 .header 
   margin 0 auto
-  width "calc(100% - %s)" % menu-height
+  width calc(100% - 80px)
   padding 0 40px
   height menu-height
   display flex
@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5
   position relative
   width 40px
   height 20px
+  display none
   span
     position absolute
     left 0
@@ -196,11 +197,57 @@ h1, h2, h3, h4, h5
   &:hover
     color hover-color
 
+.top-button 
+  display none
+
 +tb()
   .header 
     height 80px
-    margin 0 16px
+    padding 0 24px
+    width calc(100% - 48px)
   .logo 
     width 80px
+  .footer-container
+    padding 16px 24px 0
   .footer
-    margin 0 16px
+    &__part
+      border none
+    &__part:first-child
+      flex-basis calc(100% / 3 * 2)
+    &__part:nth-of-type(2)
+      flex-basis calc(100% / 3)
+      padding 0 
+
++sp()
+  .menu-trigger
+    display initial
+  .menu
+    display none
+  .footer-container
+    padding 0
+  .footer
+    &__part
+      padding 16px 24px
+    &__part:first-child
+      flex-basis 100%
+      .footer__part__txt
+        width 100%
+    &__part:nth-of-type(2)
+      border-top 1px solid txt-color
+      flex-basis 100%
+      padding 16px 24px
+    .copyright
+      padding 16px 24px
+    .link
+      margin 16px 0 24px
+  .top-button
+    display initial
+    position fixed
+    right 24px
+    bottom 24px
+    background txt-color
+    color sub-color
+    width 48px 
+    height 48px
+    border-radius 4px
+    { flex-center }
