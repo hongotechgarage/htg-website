@@ -9,39 +9,70 @@
     <meta hid="og:url" property="og:url" content="https://2020.todaitotexas.com/">
     <meta hid="og:title" property="og:title" content="東京大学本郷テックガレージ">
     <meta hid="og:description" property="og:description" content="東京大学本郷テックガレージの紹介です。">
-    <meta hid="og:image" property="og:image" content="assets/img/ogp.jpg">
-    <link rel="stylesheet" href="assets/css/common.css">
+    <meta hid="og:image" property="og:image" content="../assets/img/ogp.jpg">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/page.css">
     <link rel="canonical" href="https://charon616.github.io/garage-raw-web/">
-    <link rel="icon" type="image/x-icon" href="assets/img/icon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
     <title>東京大学 本郷テックガレージ</title>
-    <link rel="stylesheet" href="assets/css/page.css">
   </head>
   <body>
-    <header class="header"><a href="/"><img class="logo" src="assets/img/logo.png"></a><a class="menu-trigger" id="menu-trigger" href="#"><span></span><span></span></a></header>
-    <ul class="menu" id="menu">
-      <li> <a href="/">HOME</a></li>
-      <li><a href="project">PROJECT</a></li>
-      <li> <a href="environment">ENVIRONMENT</a></li>
-      <li> <a href="access">ACCESS</a></li>
-    </ul>
+    <header class="header"><a href="/"><img class="logo" src="../assets/img/logo.png"></a>
+      <ul class="menu" id="menu">
+        <li> <a href="../">TOP</a></li>
+        <li><a href="../project">PROJECT</a></li>
+        <li> <a href="../environment">ENVIRONMENT</a></li>
+        <li> <a href="../access">ACCESS</a></li>
+      </ul>
+    </header>
     <main class="page">
-      <h2 class="page__ttl">ACCESS</h2>
-      <h3>住所</h3>
-      <p>東京都文京区本郷5-24-5 角川本郷ビル 2F (Google Maps)</p>
-      <h3>入退館について</h3>
-      <p>9 時から 19 時までは角川本郷ビルの正門（本郷通り側）からお入りいただけます。</p>
-      <p>19 時以降の入退館については以下をご参照ください。</p>
-      <h3>19 時以降の入館</h3>
-      <p>19 時以降の入館については、裏通り（懐徳門側、翔山亭付近）からの入館しかできません。</p>
-      <p>※呼び出しに応じない場合、誰もおらず入館できない可能性があります</p>
-      <h3>19 時以降の退館</h3>
+      <div class="page__ttl">
+        <h2 class="en">ACCESS</h2>
+        <h2 class="jp">入退館にあたって</h2>
+      </div>
+      <div class="group">
+        <p>東京都文京区本郷5-24-5 ナガセ本郷ビル 2F </p>
+        <button class="link">Google Maps ></button>
+        <p>平日19時まではナガセ本郷ビルの正門（本郷通り側）からお入りいただけます。</p>
+      </div>
+      <div class="group">
+        <h3>平日19時以降・休日の入館</h3>
+        <p>懐徳門側からのみ入館できます。</p>
+        <div class="access-imgs"><img src="../assets/img/access-1.png"><img src="../assets/img/access-1.png"><img src="../assets/img/access-1.png"><img src="../assets/img/access-1.png"><img src="../assets/img/access-1.png"><img src="../assets/img/access-1.png"></div>
+      </div>
+      <div class="group">
+        <h3>平日19時以降・休日の退館</h3>
+        <div class="access-imgs"><img src="../assets/img/access-1.png"></div>
+      </div>
     </main>
     <footer class="footer-container">
       <div class="footer">
-        <h2>ACCESS</h2>
-        <p>〒113-0033 東京都文京区本郷5-24-5 ナガセ本郷ビル 2F (Google Map)</p><a href="project">詳しくはこちら</a>
+        <div class="footer__part"><span>CONTACT</span>
+          <div class="footer__part__txt">
+            <h3>メーリングリスト</h3>
+            <p>本郷テックガレージに関する</p>
+            <p>最新情報をお届けしています。</p>
+            <button class="link">登録はこちら ></button>
+          </div>
+          <div class="footer__part__txt">
+            <h3>お問い合わせ</h3>
+            <p>質問・相談などはこちらまで</p>
+            <p>ご連絡ください。</p>
+            <button class="link">お問い合わせフォームへ  ></button>
+          </div>
+        </div>
+        <div class="footer__part"><span>ACCESS</span>
+          <div class="footer__part__txt">
+            <h3>アクセス</h3>
+            <p>〒113-0033</p>
+            <p>東京都文京区本郷5-24-5 ナガセ本郷ビル 2F </p>
+            <button class="link">詳しくはこちら  ></button>
+          </div>
+        </div>
+        <div class="copyright">© hongotechgarage</div>
       </div>
-    </footer>
+    </footer><script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
   </body>
 </html>

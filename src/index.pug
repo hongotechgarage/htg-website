@@ -2,37 +2,30 @@ doctype html
 html(lang="ja")
   head
     include _component/_head
-    link(rel="stylesheet" href="assets/css/index.css")
   body
     include _component/_header
     .top
-      .top__txt
-        h1#sitettl HONGO TECH GARAGE
-        p 本郷テックガレージは東京大学の学生が技術的なサイドプロジェクトを行うための秘密基地です。
-        p 東京大学 産学協創推進本部の下部組織として、学外にプログラミングや工作用のスペースを用意しています。
       img.top__img(src="assets/img/main-img.png")
+      .top__txt
+        p 本郷テックガレージは東京大学の学生が技術的なサイドプロジェクトを行うための秘密基地です。
+        p 東京大学産学協創推進本部の下部組織として、学外に開発のスペースを用意しています。
     main.main
       .content
-        span.content__tag 01 POLICY
+        span.content__tag POLICY
         h2.content__ttl 学生の利用に関して
-        p 本郷テックガレージは、プロジェクトを行う学生のための施設です。もし利用したい場合はプロジェクト申請を行ってください。メンバーでない方のご利用はご遠慮願っています。
-        p また社会人の皆様のご利用、ご見学はかたくお断りしています。
-      .content
-        span.content__tag 02 PROJECT
-        h2.content__ttl 募集アイデアについて
-        p 本郷テックガレージでは、逆張りのアイデアをもとにした、ソフトウェアやハードウェアを作る技術プロジェクトを募集、支援しています。
-        p 詳しくはプロジェクトのページをご覧ください。
-        a(href="project") more
-      .content
-        span.content__tag 03 ENVIRONMENT
-        h2.content__ttl サービスと環境
-        p 本郷テックガレージは、プロジェクトを行う学生のための施設です。もし利用したい場合はプロジェクト申請を行ってください。メンバーでない方のご利用はご遠慮願っています。
-        p また社会人の皆様のご利用、ご見学はかたくお断りしています。
-        a(href="environment") more
-      .content
-        h2.content__ttl メーリングリスト
-        p メーリングリストでは随時ガレージの情報をアップデートしています。
-        button 本郷テックガレージのメーリングリストへの登録
-        button お問い合わせはこちら→
+        p 本郷テックガレージは、プロジェクトを行う学生のための施設です。利用したい場合はプロジェクト申請を行ってください。
+        p メンバーではない方のご利用はご遠慮ください。
+        br
+        p 社会人の皆様のご利用、ご見学はかたくお断りしています。
+      a.content(href="project")
+        span.content__tag PROJECT
+        h2.content__ttl 募集するプロジェクトについて
+        p 本郷テックガレージでは、逆張りのアイデアをもとにした、ソフトウェアやハードウェアを作る技術プロジェクトを募集しています。
+        .content__link MORE INFO >
+      a.content(href="project")
+        span.content__tag ENVIRONMENT
+        h2.content__ttl 活動する環境について
+        p ソフトウェア開発支援 (共有PC等)、ハードウェア開発支援 (工作機械等)、フリードリンク、無料 WiFiなどを提供します。
+        .content__link MORE INFO >
     include _component/_footer
     script(type="text/javascript" src="assets/js/index.js")

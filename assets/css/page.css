@@ -1,10 +1,106 @@
 .page {
-  max-width: 960px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 16px 0;
 }
+.page__ttl {
+  text-align: center;
+  margin: 220px auto 96px;
+}
+.page__ttl .en {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+.page__ttl .jp {
+  font-size: 28px;
+}
 .page__tag {
   letter-spacing: 0.2em;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #262626;
 }
-/*# sourceMappingURL=page.css.map */
+.page .group {
+  margin-bottom: 120px;
+}
+.page .group .link {
+  background: #f4f4f4;
+}
+.page .program {
+  display: flex;
+  justify-content: space-between;
+}
+.page .program__item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: calc((1120px - 32px)/2 - 80px);
+  border: 1px solid #262626;
+  border-radius: 4px;
+  padding: 40px;
+  margin-top: 24px;
+}
+.page .program__item h4 {
+  margin: 0 0 24px;
+  font-size: 20px;
+}
+.page .program__item a {
+  margin-top: 16px;
+}
+.page .ok-ideas {
+  padding: 0;
+}
+.page .ok-ideas li {
+  padding: 12px;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  list-style: none;
+  margin: 16px 0;
+}
+.page .ng-ideas {
+  padding: 0;
+}
+.page .ng-ideas li {
+  list-style: none;
+  margin: 8px 0;
+}
+.page .ng-ideas li::before,
+.page .ng-ideas li::after {
+  content: '';
+  display: block;
+}
+.page .ng-ideas li::before position absolute,
+.page .ng-ideas li::after position absolute {
+  top: 8px;
+  left: 3px;
+  height: 4px;
+  width: 14px;
+  background: #aaa;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+.page .ng-ideas li::after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.page h3 {
+  font-size: 24px;
+}
+.page .access-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.page .access-imgs img {
+  width: calc( (1120px - 64px) /3);
+  margin-bottom: 32px;
+}
+.page.environment .group {
+  margin-bottom: 48px;
+}
+.page.environment h4 {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 36px 0 8px;
+}

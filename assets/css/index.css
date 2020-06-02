@@ -1,25 +1,40 @@
 .top {
   margin: 0 auto;
-  height: calc(100vh - 120px);
-  max-width: 960px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 100vh;
+  max-width: 1120px;
+  text-align: center;
+}
+.top__img {
+  margin: 36vh auto 120px;
+}
+.top__txt {
+  letter-spacing: 0.2em;
+  line-height: 2.4em;
 }
 .main {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 16px 0;
+  margin: 0 auto 120px;
+  max-width: 1120px;
 }
 .content {
-  margin: 32px 0;
+  margin: 48px 0;
+  padding: 72px 96px;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  line-height: 24px;
+  display: block;
 }
 .content__tag {
-  letter-spacing: 0.2em;
-  border-bottom: 1px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.1em;
 }
 .content__ttl {
-  font-size: 24px;
+  font-size: 26px;
+}
+.content__link {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 @media screen and (max-width: 1024px) {
   .top {

@@ -4,6 +4,85 @@
     max-width content-width
     margin 0 auto
     padding 16px 0
+    &__ttl
+        text-align center
+        margin 220px auto 96px
+        .en
+            {font-style}
+        .jp
+            font-size 28px
     &__tag
         letter-spacing .2em
         border-bottom 1px solid txt-color
+    .group
+        margin-bottom 120px
+        .link
+            background sub-color
+
+    .program
+        display flex 
+        justify-content space-between
+        &__item
+            display flex
+            justify-content space-between
+            flex-direction column
+            width "calc((%s - 32px)/2 - 80px)" % content-width
+            border 1px solid txt-color
+            border-radius 4px
+            padding 40px
+            margin-top 24px
+            h4 
+                margin 0 0 24px
+                font-size 20px
+            a   
+                margin-top 16px
+        // .link
+        //     width 50%
+    .ok-ideas
+        padding 0
+        li
+            padding 12px
+            border 1px solid txt-color
+            border-radius 4px
+            list-style none
+            margin 16px 0
+    .ng-ideas
+        padding 0
+        li
+            list-style none
+            margin 8px 0
+            &::before, &::after
+	            content ''
+	            display block
+	            position absolute
+                top 8px
+                left 3px
+                height 4px 
+                width 14px
+                background #aaa
+                transform rotate(-45deg)
+                -webkit-transform rotate(-45deg)
+                -o-transform rotate(-45deg)
+            &::after
+                transform rotate(45deg)
+                -webkit-transform rotate(45deg)
+                -o-transform rotate(45deg)
+
+    h3 
+        font-size 24px
+    .access-imgs
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        margin-top 24px
+        img
+            width "calc( (%s - 64px) /3)" % content-width
+            margin-bottom 32px
+    
+    &.environment
+        .group
+            margin-bottom 48px
+        h4 
+            font-weight bold
+            font-size 12px
+            margin 36px 0 8px

@@ -1,7 +1,7 @@
 @import "_variables.styl"
 
 html
-  font-family 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+  font-family 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial
   font-size 14px
   word-spacing 1px
   line-height 21px
@@ -29,33 +29,53 @@ body, ul, p
 a
   text-decoration none
 
+a:link, a:visited, a:active 
+  color txt-color
+
+a:hover
+  color hover-color
+  cursor pointer
+
+h1, h2, h3, h4, h5
+  font-weight normal
+
+
 /* for debug */
 // * 
 //   border 1px solid blue
 
 .header 
   margin 0 auto
-  height 120px
+  width "calc(100% - %s)" % menu-height
+  padding 0 40px
+  height menu-height
   display flex
   align-items center
   justify-content space-between
-  max-width content-width
+  position fixed
+  z-index 100
+  color txt-color
 
 .menu
-  position fixed
-  top 0
-  left 0
-  width 100vw
-  height 100vh
-  z-index 100
-  background rgba(255, 255, 255, .6)
-  flex-direction row
-  list-style none
-  {flex-center}
-  flex-direction column
-  display none
+  display flex
+  list-style none 
   li
     max-width content-width
+    margin 0 16px
+    {font-style}
+    position relative
+    &:last-child
+      margin 0 0 0 16px
+    &::after
+      content ''
+      width 4px
+      height 4px 
+      border-radius 1px
+      background txt-color
+      position absolute
+      left calc(50% - 2px)
+      bottom -4px
+
 
 .menu-trigger, .menu-trigger span 
   z-index 101
@@ -129,13 +149,52 @@ a
     transform translateY(-9px) rotate(-25deg)
 
 .footer-container
-  background txt-color
   width 100%
+  background sub-color
+  color txt-color
+  padding 16px 40px 0
+  border-top 1px solid txt-color
+  box-sizing border-box
 .footer
+  display flex
+  flex-wrap wrap
   margin 0 auto
-  padding 16px 0 48px
-  max-width content-width
-  color bg-color
+  &__part
+    border-right 1px solid txt-color
+    display flex
+    flex-wrap wrap
+  &__part:first-child
+    flex-basis 50%
+    .footer__part__txt
+      width 50%
+  &__part:nth-of-type(2)
+    flex-basis 25%
+    padding 0 32px
+  span 
+    {font-style}
+    font-size 12px
+    display block
+    flex-basis 100%
+  h3 
+    font-size 20px
+    margin 24px 0
+  .copyright
+    border-top 1px solid txt-color
+    width 100%
+    padding 16px 0
+
+.link
+  background bg-color
+  border-radius 4px
+  padding 14px 24px
+  border none
+  outline none 
+  appearance none
+  font-size 14px
+  margin 24px 0
+  cursor pointer
+  &:hover
+    color hover-color
 
 +tb()
   .header 

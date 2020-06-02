@@ -11,56 +11,69 @@
     <meta hid="og:description" property="og:description" content="東京大学本郷テックガレージの紹介です。">
     <meta hid="og:image" property="og:image" content="assets/img/ogp.jpg">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="canonical" href="https://charon616.github.io/garage-raw-web/">
     <link rel="icon" type="image/x-icon" href="assets/img/icon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
     <title>東京大学 本郷テックガレージ</title>
-    <link rel="stylesheet" href="assets/css/index.css">
   </head>
   <body>
-    <header class="header"><a href="/"><img class="logo" src="assets/img/logo.png"></a><a class="menu-trigger" id="menu-trigger" href="#"><span></span><span></span></a></header>
-    <ul class="menu" id="menu">
-      <li> <a href="/">HOME</a></li>
-      <li><a href="project">PROJECT</a></li>
-      <li> <a href="environment">ENVIRONMENT</a></li>
-      <li> <a href="access">ACCESS</a></li>
-    </ul>
-    <div class="top">
+    <header class="header"><a href="/"><img class="logo" src="assets/img/logo.png"></a>
+      <ul class="menu" id="menu">
+        <li> <a href="/">TOP</a></li>
+        <li><a href="project">PROJECT</a></li>
+        <li> <a href="environment">ENVIRONMENT</a></li>
+        <li> <a href="access">ACCESS</a></li>
+      </ul>
+    </header>
+    <div class="top"><img class="top__img" src="assets/img/main-img.png">
       <div class="top__txt">
-        <h1 id="sitettl">HONGO TECH GARAGE</h1>
         <p>本郷テックガレージは東京大学の学生が技術的なサイドプロジェクトを行うための秘密基地です。</p>
-        <p>東京大学 産学協創推進本部の下部組織として、学外にプログラミングや工作用のスペースを用意しています。</p>
-      </div><img class="top__img" src="assets/img/main-img.png">
+        <p>東京大学産学協創推進本部の下部組織として、学外に開発のスペースを用意しています。</p>
+      </div>
     </div>
     <main class="main">
-      <div class="content"><span class="content__tag">01 POLICY</span>
+      <div class="content"><span class="content__tag">POLICY</span>
         <h2 class="content__ttl">学生の利用に関して</h2>
-        <p>本郷テックガレージは、プロジェクトを行う学生のための施設です。もし利用したい場合はプロジェクト申請を行ってください。メンバーでない方のご利用はご遠慮願っています。</p>
-        <p>また社会人の皆様のご利用、ご見学はかたくお断りしています。</p>
-      </div>
-      <div class="content"><span class="content__tag">02 PROJECT</span>
-        <h2 class="content__ttl">募集アイデアについて</h2>
-        <p>本郷テックガレージでは、逆張りのアイデアをもとにした、ソフトウェアやハードウェアを作る技術プロジェクトを募集、支援しています。</p>
-        <p>詳しくはプロジェクトのページをご覧ください。</p><a href="project">more</a>
-      </div>
-      <div class="content"><span class="content__tag">03 ENVIRONMENT</span>
-        <h2 class="content__ttl">サービスと環境</h2>
-        <p>本郷テックガレージは、プロジェクトを行う学生のための施設です。もし利用したい場合はプロジェクト申請を行ってください。メンバーでない方のご利用はご遠慮願っています。</p>
-        <p>また社会人の皆様のご利用、ご見学はかたくお断りしています。</p><a href="environment">more</a>
-      </div>
-      <div class="content">
-        <h2 class="content__ttl">メーリングリスト</h2>
-        <p>メーリングリストでは随時ガレージの情報をアップデートしています。</p>
-        <button>本郷テックガレージのメーリングリストへの登録</button>
-        <button>お問い合わせはこちら→</button>
-      </div>
+        <p>本郷テックガレージは、プロジェクトを行う学生のための施設です。利用したい場合はプロジェクト申請を行ってください。</p>
+        <p>メンバーではない方のご利用はご遠慮ください。</p><br>
+        <p>社会人の皆様のご利用、ご見学はかたくお断りしています。</p>
+      </div><a class="content" href="project"><span class="content__tag">PROJECT</span>
+        <h2 class="content__ttl">募集するプロジェクトについて</h2>
+        <p>本郷テックガレージでは、逆張りのアイデアをもとにした、ソフトウェアやハードウェアを作る技術プロジェクトを募集しています。</p>
+        <div class="content__link">MORE INFO ></div></a><a class="content" href="project"><span class="content__tag">ENVIRONMENT</span>
+        <h2 class="content__ttl">活動する環境について</h2>
+        <p>ソフトウェア開発支援 (共有PC等)、ハードウェア開発支援 (工作機械等)、フリードリンク、無料 WiFiなどを提供します。</p>
+        <div class="content__link">MORE INFO ></div></a>
     </main>
     <footer class="footer-container">
       <div class="footer">
-        <h2>ACCESS</h2>
-        <p>〒113-0033 東京都文京区本郷5-24-5 ナガセ本郷ビル 2F (Google Map)</p><a href="project">詳しくはこちら</a>
+        <div class="footer__part"><span>CONTACT</span>
+          <div class="footer__part__txt">
+            <h3>メーリングリスト</h3>
+            <p>本郷テックガレージに関する</p>
+            <p>最新情報をお届けしています。</p>
+            <button class="link">登録はこちら ></button>
+          </div>
+          <div class="footer__part__txt">
+            <h3>お問い合わせ</h3>
+            <p>質問・相談などはこちらまで</p>
+            <p>ご連絡ください。</p>
+            <button class="link">お問い合わせフォームへ  ></button>
+          </div>
+        </div>
+        <div class="footer__part"><span>ACCESS</span>
+          <div class="footer__part__txt">
+            <h3>アクセス</h3>
+            <p>〒113-0033</p>
+            <p>東京都文京区本郷5-24-5 ナガセ本郷ビル 2F </p>
+            <button class="link">詳しくはこちら  ></button>
+          </div>
+        </div>
+        <div class="copyright">© hongotechgarage</div>
       </div>
-    </footer>
+    </footer><script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script type="text/javascript" src="assets/js/index.js"></script>
   </body>
 </html>

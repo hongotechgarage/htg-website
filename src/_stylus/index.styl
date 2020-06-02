@@ -2,24 +2,34 @@
 
 .top 
     margin 0 auto
-    height calc(100vh - 120px)
+    height 100vh
     max-width content-width
-    display flex
-    justify-content space-between
-    align-items center
+    text-align center
+    &__img
+        margin 36vh auto 120px
+    &__txt
+        letter-spacing .2em
+        line-height 2.4em
+    
 
 .main
-    margin 0 auto
+    margin 0 auto 120px
     max-width content-width
-    padding 16px 0
 .content
-    margin 32px 0
+    margin 48px 0
+    padding 72px 96px
+    border 1px solid txt-color
+    border-radius 16px
+    line-height 24px
+    display block
     &__tag
-        letter-spacing .2em
-        border-bottom 1px solid txt-color
+        {font-style}
+        font-size 20px
+        letter-spacing .1em
     &__ttl
-        font-size 24px
-
+        font-size 26px
+    &__link
+        {font-style}
 +tb()
     .top
         margin 0 16px
