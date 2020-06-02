@@ -20,12 +20,15 @@
   </head>
   <body>
     <header class="header"><a href="/"><img class="logo" src="../assets/img/logo.png"></a><a class="menu-trigger" id="menu-trigger" href="#"><span></span><span></span></a>
-      <ul class="menu" id="menu">
-        <li> <a href="../">TOP</a></li>
-        <li><a href="../project">PROJECT</a></li>
-        <li> <a href="../environment">ENVIRONMENT</a></li>
-        <li> <a href="../access">ACCESS</a></li>
-      </ul>
+      <div class="menu" id="menu">
+        <div class="menu__bg"></div>
+        <ul>
+          <li> <a href="../">TOP</a></li>
+          <li><a href="../project">PROJECT</a></li>
+          <li> <a href="../environment">ENVIRONMENT</a></li>
+          <li> <a href="../access">ACCESS</a></li>
+        </ul>
+      </div>
     </header>
     <main class="page project">
       <div class="page__ttl">
@@ -201,7 +204,7 @@
       </div>
     </main>
     <footer class="footer-container">
-      <div class="top-button">↑</div>
+      <div class="top-button" id="top-button">↑</div>
       <div class="footer">
         <div class="footer__part"><span>CONTACT</span>
           <div class="footer__part__txt">
@@ -227,6 +230,7 @@
         </div>
         <div class="copyright">© hongotechgarage</div>
       </div>
-    </footer><script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    </footer>
+    <script type="text/javascript" src="../assets/js/index.js"></script>
   </body>
 </html>
