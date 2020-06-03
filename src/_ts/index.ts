@@ -39,21 +39,17 @@ topButton.onclick = function () {
 
 function currentPage() {
     let links: HTMLCollectionOf<HTMLAnchorElement> = menu.getElementsByTagName("a");
+    let current: number = 0;
 
     for (let i: number = 0; i < links.length; i++) {
         let linkurl: string = links[i].getAttribute("href");
         let currenturl: string = window.location.href;
 
-        if (linkurl.indexOf('..') != -1) {
-            if(i == 0)
-                continue
-            linkurl = linkurl.split('/')[1];
-        }
-
         if (currenturl.indexOf(linkurl) != -1) {
-            links[i].className = "current";
+            current = i;
         }
     }
+    links[current].className = "current";
 }
 
 window.addEventListener('load', currentPage);

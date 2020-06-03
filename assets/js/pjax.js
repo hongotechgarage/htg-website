@@ -19,6 +19,10 @@ var FadeTransition = Barba.BaseTransition.extend({
     },
 
     fadeIn: function () {
+        // ページトップに移動（これがないとスクロールしたところのまま画面遷移する）
+        // jQueryで書く場合は $(document).scrollTop(0);
+        $(document).scrollTop(0);
+
         var _this = this;
         //this.newContainerは、新しいコンテナのHTMLElementです。
         //この段階では、newContainerはDOM上にあります（barba-container内にあり、visibility：hiddenで囲まれています）。
@@ -33,7 +37,7 @@ var FadeTransition = Barba.BaseTransition.extend({
 
         $el.animate({
             opacity: 1
-        }, 400, function () {
+        }, 100, function () {
             //.done（）の記述で古いコンテナを自動的にDOMから削除。
             _this.done();
         });
@@ -46,3 +50,53 @@ Barba.Pjax.getTransition = function () {
 };
 
 Barba.Pjax.start();
+
+Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container, newPageRawHTML) {
+
+    //head内のタグを更新
+    // if (Barba.HistoryManager.history.length === 1) { // ファーストビュー
+    //     return;
+    // }
+    // var $newPageHead = $('<head />').html(
+    //     $.parseHTML(
+    //         newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0],
+    //         document,
+    //         true
+    //     )
+    // );
+    // var headTags = [ // 更新が必要なタグ
+    //     // "meta[property^='og']",
+    //     // "meta[itemprop]",
+    //     "script[type='text/javascript']"
+    // ].join(',');
+    // $('head').find(headTags).remove(); // タグを削除
+    // $newPageHead.find(headTags).appendTo('head'); // タグを追加
+
+
+    let links = menu.getElementsByTagName("a");
+    let current = 0;
+
+    for (let i = 0; i < links.length; i++) {
+        let linkurl = links[i].getAttribute("href");
+        let currenturl = window.location.href;
+
+        if (currenturl.indexOf(linkurl) != -1) {
+            current = i;
+        }
+    }
+    for (let i = 0; i < links.length; i++) {
+        if(i == current){
+            links[i].className = "current";
+        }else{
+            links[i].classList.remove("current");
+        }
+    }
+
+    let mymenu = document.getElementById('menu');
+    let mymenuTrigger = document.getElementById('menu-trigger');
+    mymenuTrigger.classList.remove('active');
+    mymenu.classList.remove('active');
+
+    return false;
+
+});

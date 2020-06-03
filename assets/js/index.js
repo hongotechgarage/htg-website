@@ -43,20 +43,18 @@ topButton.onclick = function () {
 
 function currentPage() {
   var links = menu.getElementsByTagName("a");
+  var current = 0;
 
   for (var i = 0; i < links.length; i++) {
     var linkurl = links[i].getAttribute("href");
     var currenturl = window.location.href;
 
-    if (linkurl.indexOf('..') != -1) {
-      if (i == 0) continue;
-      linkurl = linkurl.split('/')[1];
-    }
-
     if (currenturl.indexOf(linkurl) != -1) {
-      links[i].className = "current";
+      current = i;
     }
   }
+
+  links[current].className = "current";
 }
 
 window.addEventListener('load', currentPage);
