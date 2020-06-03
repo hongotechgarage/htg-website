@@ -1,20 +1,7 @@
 "use strict";
 
 var menu = document.getElementById('menu');
-var menuTrigger = document.getElementById('menu-trigger'); // if (!menu) {
-//     throw new Error('menuがありません！');
-// } 
-// if (!menu_trigger) {
-//     throw new Error('menu_triggerがありません！');
-// }  
-// menu_trigger.addEventListener('click', () => {
-//     menu_trigger.classList.toggle('active');
-//     if (menu.style.display === "none") {
-//         menu.style.display = "block";
-//     } else {
-//         menu.style.display = "none";
-//     }
-// }, false);
+var menuTrigger = document.getElementById('menu-trigger');
 
 function toggleNav() {
   menuTrigger.addEventListener('click', function () {
@@ -53,4 +40,24 @@ window.onscroll = function () {
 topButton.onclick = function () {
   scrollToTop();
 };
+
+function currentPage() {
+  var links = menu.getElementsByTagName("a");
+
+  for (var i = 0; i < links.length; i++) {
+    var linkurl = links[i].getAttribute("href");
+    var currenturl = window.location.href;
+
+    if (linkurl.indexOf('..') != -1) {
+      if (i == 0) continue;
+      linkurl = linkurl.split('/')[1];
+    }
+
+    if (currenturl.indexOf(linkurl) != -1) {
+      links[i].className = "current";
+    }
+  }
+}
+
+window.addEventListener('load', currentPage);
 //# sourceMappingURL=index.js.map

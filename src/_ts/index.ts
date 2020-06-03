@@ -1,19 +1,5 @@
 let menu: HTMLElement = document.getElementById('menu');
 let menuTrigger: HTMLElement = document.getElementById('menu-trigger');
-// if (!menu) {
-//     throw new Error('menuがありません！');
-// } 
-// if (!menu_trigger) {
-//     throw new Error('menu_triggerがありません！');
-// }  
-// menu_trigger.addEventListener('click', () => {
-//     menu_trigger.classList.toggle('active');
-//     if (menu.style.display === "none") {
-//         menu.style.display = "block";
-//     } else {
-//         menu.style.display = "none";
-//     }
-// }, false);
 
 function toggleNav() {
     menuTrigger.addEventListener('click', function () {
@@ -49,3 +35,25 @@ window.onscroll = function () {
 topButton.onclick = function () {
     scrollToTop();
 };
+
+
+function currentPage() {
+    let links: HTMLCollectionOf<HTMLAnchorElement> = menu.getElementsByTagName("a");
+
+    for (let i: number = 0; i < links.length; i++) {
+        let linkurl: string = links[i].getAttribute("href");
+        let currenturl: string = window.location.href;
+
+        if (linkurl.indexOf('..') != -1) {
+            if(i == 0)
+                continue
+            linkurl = linkurl.split('/')[1];
+        }
+
+        if (currenturl.indexOf(linkurl) != -1) {
+            links[i].className = "current";
+        }
+    }
+}
+
+window.addEventListener('load', currentPage);

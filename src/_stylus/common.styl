@@ -68,15 +68,17 @@ h1, h2, h3, h4, h5
     position relative
     &:last-child
       margin 0 0 0 16px
-    &::after
-      content ''
-      width 4px
-      height 4px 
-      border-radius 1px
-      background txt-color
-      position absolute
-      left calc(50% - 2px)
-      bottom -4px
+  a
+    &.current
+      &::after
+        content ''
+        width 4px
+        height 4px 
+        border-radius 1px
+        background txt-color
+        position absolute
+        left calc(50% - 2px)
+        bottom -4px
 
 .menu-trigger, .menu-trigger span 
   z-index 101
@@ -154,7 +156,7 @@ h1, h2, h3, h4, h5
   width 100%
   background sub-color
   color txt-color
-  padding 16px 40px 0
+  padding 0
   border-top 1px solid txt-color
   box-sizing border-box
 .footer
@@ -166,12 +168,13 @@ h1, h2, h3, h4, h5
     display flex
     flex-wrap wrap
   &__part:first-child
-    flex-basis 50%
+    flex-basis calc(50% - 40px)
+    padding 16px 0 0 40px 
     .footer__part__txt
       width 50%
   &__part:nth-of-type(2)
-    flex-basis 25%
-    padding 0 32px
+    flex-basis calc(25% - 32px)
+    padding 16px 32px 0
   span 
     {font-style}
     font-size 12px
@@ -183,7 +186,7 @@ h1, h2, h3, h4, h5
   .copyright
     border-top 1px solid txt-color
     width 100%
-    padding 16px 0
+    padding 16px 40px
 
 .link
   background bg-color
@@ -212,16 +215,20 @@ h1, h2, h3, h4, h5
     width calc(100% - 48px)
   .logo 
     width 80px
-  .footer-container
-    padding 16px 24px 0
   .footer
     &__part
       border none
     &__part:first-child
-      flex-basis calc(100% / 3 * 2)
+      flex-basis calc((100% - 48px) / 3 * 2)
+      padding 16px 0 0 24px
+      justify-content flex-start
+      .footer__part__txt
+        width calc((100% - 32px)/2)
     &__part:nth-of-type(2)
-      flex-basis calc(100% / 3)
-      padding 0 
+      flex-basis calc((100% - 48px) / 3)
+      padding 16px 24px 0 0
+    .copyright
+      padding 16px 24px
 
 +sp()
   .menu-trigger
@@ -248,10 +255,11 @@ h1, h2, h3, h4, h5
       margin 24px 0
       font-size 20px 
       font-weight normal
-      &::after
-        display none
       &:last-child
         margin 24px 0
+    a
+      &::after
+        display none
     &__bg
       position fixed
       width 100%
@@ -264,11 +272,7 @@ h1, h2, h3, h4, h5
       transition all .2s
 
       
-  .footer-container
-    padding 0
   .footer
-    &__part
-      padding 16px 24px
     &__part:first-child
       flex-basis 100%
       .footer__part__txt
@@ -276,8 +280,6 @@ h1, h2, h3, h4, h5
     &__part:nth-of-type(2)
       border-top 1px solid txt-color
       flex-basis 100%
-      padding 16px 24px
-    .copyright
       padding 16px 24px
     .link
       margin 16px 0 24px

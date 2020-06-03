@@ -77,7 +77,7 @@ h5 {
 .menu li:last-child {
   margin: 0 0 0 16px;
 }
-.menu li::after {
+.menu a.current::after {
   content: '';
   width: 4px;
   height: 4px;
@@ -132,7 +132,7 @@ h5 {
   width: 100%;
   background: #f4f4f4;
   color: #262626;
-  padding: 16px 40px 0;
+  padding: 0;
   border-top: 1px solid #262626;
   box-sizing: border-box;
 }
@@ -147,14 +147,15 @@ h5 {
   flex-wrap: wrap;
 }
 .footer__part:first-child {
-  flex-basis: 50%;
+  flex-basis: calc(50% - 40px);
+  padding: 16px 0 0 40px;
 }
 .footer__part:first-child .footer__part__txt {
   width: 50%;
 }
 .footer__part:nth-of-type(2) {
-  flex-basis: 25%;
-  padding: 0 32px;
+  flex-basis: calc(25% - 32px);
+  padding: 16px 32px 0;
 }
 .footer span {
   font-family: 'Lato', sans-serif;
@@ -170,7 +171,7 @@ h5 {
 .footer .copyright {
   border-top: 1px solid #262626;
   width: 100%;
-  padding: 16px 0;
+  padding: 16px 40px;
 }
 .link {
   background: #fff;
@@ -205,18 +206,23 @@ h5 {
   .logo {
     width: 80px;
   }
-  .footer-container {
-    padding: 16px 24px 0;
-  }
   .footer__part {
     border: none;
   }
   .footer__part:first-child {
-    flex-basis: calc(100% / 3 * 2);
+    flex-basis: calc((100% - 48px) / 3 * 2);
+    padding: 16px 0 0 24px;
+    justify-content: flex-start;
+  }
+  .footer__part:first-child .footer__part__txt {
+    width: calc((100% - 32px) / 2);
   }
   .footer__part:nth-of-type(2) {
-    flex-basis: calc(100% / 3);
-    padding: 0;
+    flex-basis: calc((100% - 48px) / 3);
+    padding: 16px 24px 0 0;
+  }
+  .footer .copyright {
+    padding: 16px 24px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -249,11 +255,11 @@ h5 {
     font-size: 20px;
     font-weight: normal;
   }
-  .menu li::after {
-    display: none;
-  }
   .menu li:last-child {
     margin: 24px 0;
+  }
+  .menu a::after {
+    display: none;
   }
   .menu__bg {
     position: fixed;
@@ -266,12 +272,6 @@ h5 {
     z-index: 0;
     transition: all 0.2s;
   }
-  .footer-container {
-    padding: 0;
-  }
-  .footer__part {
-    padding: 16px 24px;
-  }
   .footer__part:first-child {
     flex-basis: 100%;
   }
@@ -281,9 +281,6 @@ h5 {
   .footer__part:nth-of-type(2) {
     border-top: 1px solid #262626;
     flex-basis: 100%;
-    padding: 16px 24px;
-  }
-  .footer .copyright {
     padding: 16px 24px;
   }
   .footer .link {
