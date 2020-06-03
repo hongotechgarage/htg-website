@@ -18,10 +18,10 @@
 .content {
   margin: 48px 0;
   padding: 72px 96px;
-  border: 1px solid #262626;
   border-radius: 16px;
   line-height: 24px;
   display: block;
+  position: relative;
 }
 .content__tag {
   font-family: 'Lato', sans-serif;
@@ -32,12 +32,68 @@
 .content__ttl {
   font-size: 26px;
 }
-.content__link {
+.content:first-child:hover::after {
+  clip-path: inset(0 calc(100% - 64px) calc(100% - 64px) 0);
+  -webkit-clip-path: inset(0 calc(100% - 64px) calc(100% - 64px) 0);
+}
+.content:first-child:hover::before {
+  clip-path: inset(calc(100% - 64px) 0 0 calc(100% - 64px));
+  -webkit-clip-path: inset(calc(100% - 64px) 0 0 calc(100% - 64px));
+}
+.content .link {
   font-family: 'Lato', sans-serif;
   font-weight: bold;
+  background: #f4f4f4;
+  display: inline-block;
 }
 .content p {
   text-align: justify;
+}
+.content::after {
+  border-left: solid 1px #262626;
+  border-top: solid 1px #262626;
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+  -webkit-transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+  clip-path: inset(0 calc(100% - 64px) calc(100% - 64px) 0);
+  -webkit-clip-path: inset(0 calc(100% - 64px) calc(100% - 64px) 0);
+}
+.content::before {
+  border-right: solid 1px #262626;
+  border-bottom: solid 1px #262626;
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+  -webkit-transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+  clip-path: inset(calc(100% - 64px) 0 0 calc(100% - 64px));
+  -webkit-clip-path: inset(calc(100% - 64px) 0 0 calc(100% - 64px));
+}
+.content:hover::after {
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+}
+.content:hover::before {
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+}
+.content:hover {
+  color: #262626;
+}
+.content:hover .link {
+  color: #acacac;
 }
 @media screen and (max-width: 1024px) {
   .top {
@@ -105,5 +161,11 @@
   }
   .content:last-child {
     margin-bottom: 80px;
+  }
+  .content::after {
+    content: none;
+  }
+  .content::before {
+    content: none;
   }
 }

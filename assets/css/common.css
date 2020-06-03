@@ -91,7 +91,6 @@ h5 {
 .menu-trigger span {
   z-index: 101;
   display: inline-block;
-  transition: all 0.2s;
   box-sizing: border-box;
 }
 .menu-trigger {
@@ -118,14 +117,14 @@ h5 {
   width: 65%;
 }
 .menu-trigger:not(.active):hover span:nth-of-type(2) {
-  width: 100%;
+  width: 65%;
 }
 .menu-trigger.active span:nth-of-type(1) {
-  animation: active-menu-bar01 0.75s forwards;
+  animation: active-menu-bar01 0.4s forwards;
   width: 100%;
 }
 .menu-trigger.active span:nth-of-type(2) {
-  animation: active-menu-bar02 0.75s forwards;
+  animation: active-menu-bar02 0.4s forwards;
   width: 100%;
 }
 .footer-container {
@@ -185,17 +184,36 @@ h5 {
   font-size: 14px;
   margin: 24px 0;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.link::after {
+  background: #acacac;
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -180px;
+  width: 120px;
+  height: 155px;
+  opacity: 0.1;
+  transform: rotate(35deg);
+  transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .link:hover {
   color: #acacac;
 }
+.link:hover::after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
 .top-button {
   display: none;
   opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
 }
 .top-button.fade-in {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
 }
 @media screen and (max-width: 1024px) {
   .header {
