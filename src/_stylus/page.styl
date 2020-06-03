@@ -46,6 +46,11 @@
                     margin-top 16px
             .link
                 margin-bottom 0
+                &.stop
+                    background hover-color
+                    cursor not-allowed
+                    &:hover
+                        color txt-color
         .ok-ideas
             padding 0
             li
@@ -98,6 +103,8 @@
             img
                 width "calc( (%s - 64px) /3)" % content-width
                 margin-bottom 32px
+        a.link
+            overflow hidden
     
 
 +tb()

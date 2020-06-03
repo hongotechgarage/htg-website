@@ -11,7 +11,6 @@
         letter-spacing .2em
         line-height 2.4em
     
-
 .main
     margin 0 auto 120px
     max-width content-width
@@ -22,6 +21,8 @@
     line-height 24px
     display block
     position relative
+    transition all .3s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+    -webkit-transition all .3s cubic-bezier(0.55, 0.05, 0.22, 0.99)
     &__tag
         {font-style}
         font-size 20px
@@ -29,6 +30,8 @@
     &__ttl
         font-size 26px
     &:first-child
+        &:hover
+            background bg-color
         &:hover::after
             clip-path inset(0 calc(100% - 64px) calc(100% - 64px) 0)
             -webkit-clip-path inset(0 calc(100% - 64px) calc(100% - 64px) 0)
@@ -36,9 +39,17 @@
             clip-path inset(calc(100% - 64px) 0 0 calc(100% - 64px))
             -webkit-clip-path inset(calc(100% - 64px) 0 0 calc(100% - 64px))
     .link
+        transition all .3s cubic-bezier(0.55, 0.05, 0.22, 0.99)
         {font-style}
-        background sub-color
-        display inline-block
+        font-weight normal
+        border 1px solid txt-color
+        &::before
+            content none
+        &::after
+            content none
+        &:hover
+            color txt-color
+
     p 
         text-align justify
     &::after
@@ -52,8 +63,8 @@
         content ""
         display block
         position absolute
-        transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
-        -webkit-transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+        transition all .3s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+        -webkit-transition all .3s cubic-bezier(0.55, 0.05, 0.22, 0.99)
         clip-path inset(0 calc(100% - 64px) calc(100% - 64px) 0)
         -webkit-clip-path inset(0 calc(100% - 64px) calc(100% - 64px) 0)
     &::before
@@ -67,20 +78,28 @@
         content ""
         display block
         position absolute
-        transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
-        -webkit-transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+        transition all .3s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+        -webkit-transition all .3s cubic-bezier(0.55, 0.05, 0.22, 0.99)
         clip-path inset(calc(100% - 64px) 0 0 calc(100% - 64px))
         -webkit-clip-path inset(calc(100% - 64px) 0 0 calc(100% - 64px))
     &:hover::after
         clip-path inset(0 0 0 0)
         -webkit-clip-path inset(0 0 0 0)
+        transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+        -webkit-transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
     &:hover::before
         clip-path inset(0 0 0 0)
         -webkit-clip-path inset(0 0 0 0)
+        transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+        -webkit-transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
     &:hover
         color txt-color
+        background sub-color
+        transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+        -webkit-transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
         .link
-            color hover-color
+            transition all .7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+            border 1px solid rgba(0, 0, 0, 0)
 
 +tb()
     .top

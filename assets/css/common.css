@@ -30,6 +30,7 @@ p {
 }
 a {
   text-decoration: none;
+  transition: all 0.1s cubic-bezier(0.55, 0.05, 0.22, 0.99);
 }
 a:link,
 a:visited,
@@ -182,10 +183,11 @@ h5 {
      -moz-appearance: none;
           appearance: none;
   font-size: 14px;
-  margin: 24px 0;
+  margin: 16px 0;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  display: inline-block;
 }
 .link::after {
   background: #acacac;
@@ -216,6 +218,9 @@ h5 {
   transition: opacity 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
 }
 @media screen and (max-width: 1024px) {
+  a:hover {
+    color: #262626;
+  }
   .header {
     height: 80px;
     padding: 0 24px;
@@ -276,8 +281,9 @@ h5 {
   .menu li:last-child {
     margin: 24px 0;
   }
-  .menu a::after {
-    display: none;
+  .menu a.current::after {
+    left: -12px;
+    top: calc(50% - 2px);
   }
   .menu__bg {
     position: fixed;
@@ -305,6 +311,8 @@ h5 {
     margin: 16px 0 24px;
   }
   .top-button {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
     display: initial;
     position: fixed;
     right: 24px;

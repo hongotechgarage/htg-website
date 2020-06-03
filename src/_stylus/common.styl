@@ -28,6 +28,7 @@ body, ul, p
   margin 0
 a
   text-decoration none
+  transition all .1s cubic-bezier(0.55, 0.05, 0.22, 0.99)
 
 a:link, a:visited, a:active 
   color txt-color
@@ -193,10 +194,11 @@ h1, h2, h3, h4, h5
   outline none 
   appearance none
   font-size 14px
-  margin 24px 0
+  margin 16px 0
   cursor pointer
   position relative
   overflow hidden
+  display inline-block
   &::after 
     background hover-color
     content ""
@@ -223,6 +225,8 @@ h1, h2, h3, h4, h5
     transition opacity .4s cubic-bezier(0.55, 0.05, 0.22, 0.99)
 
 +tb()
+  a:hover
+    color txt-color
   .header 
     height 80px
     padding 0 24px
@@ -272,8 +276,11 @@ h1, h2, h3, h4, h5
       &:last-child
         margin 24px 0
     a
-      &::after
-        display none
+      &.current
+        &::after
+          // display none
+          left -12px
+          top calc(50% - 2px)
     &__bg
       position fixed
       width 100%
@@ -298,6 +305,7 @@ h1, h2, h3, h4, h5
     .link
       margin 16px 0 24px
   .top-button
+    {font-style}
     display initial
     position fixed
     right 24px
