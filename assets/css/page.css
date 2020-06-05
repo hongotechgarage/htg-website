@@ -129,7 +129,7 @@
 .page.access a.link {
   overflow: hidden;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1120px) {
   .page {
     margin: 0 24px;
   }
