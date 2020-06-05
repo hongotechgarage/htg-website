@@ -1,0 +1,18 @@
+doctype html
+html(lang="ja")
+  head
+    include ./_head
+  body
+    include ./_header
+
+    #barba-wrapper
+      .barba-container
+        main.page.md
+          .page__ttl
+            h2.jp
+              block title
+                span ここがタイトル
+          .group
+            block content
+              div ここがコンテンツ
+    include ./_footer

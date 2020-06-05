@@ -1,0 +1,16 @@
+extends ../_component/_md
+
+block title
+  | ここにタイトル
+
+block content
+  :markdown-it
+    # ここからmarkdown
+    # test
+      - a
+      - b
+      - c
+    ## インデントは守る必要あり
+    ```
+      hogehoge
+    ```
