@@ -129,6 +129,11 @@
 .page.access a.link {
   overflow: hidden;
 }
+.page.error .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 1120px) {
   .page {
     margin: 0 24px;
