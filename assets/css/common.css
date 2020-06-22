@@ -61,6 +61,9 @@ h5 {
   z-index: 100;
   color: #262626;
 }
+.logo {
+  width: 80px;
+}
 .menu {
   list-style: none;
 }
@@ -225,6 +228,8 @@ h5 {
     height: 80px;
     padding: 0 24px;
     width: calc(100% - 48px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(24px);
   }
   .logo {
     width: 80px;
@@ -249,6 +254,10 @@ h5 {
   }
 }
 @media screen and (max-width: 480px) {
+  .header.active {
+    backdrop-filter: initial;
+    -webkit-backdrop-filter: initial;
+  }
   .menu-trigger {
     display: inline-block;
     position: fixed;

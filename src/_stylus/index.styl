@@ -5,11 +5,17 @@
     height 100vh
     max-width content-width
     text-align center
+    {flex-center}
+    h1
+        display none
     &__img
-        margin 36vh auto 120px
+        width 560px
+        margin 0 auto
     &__txt
         letter-spacing .2em
         line-height 2.4em
+        text-align left
+        padding 0 0 0 56px 
     
 .main
     margin 0 auto 120px
@@ -104,12 +110,22 @@
 +tb()
     .top
         margin 0 24px
+        flex-direction column
+        // display block
         &__img
-            width 50%
-            margin 40vh auto 220px
+            width 400px
+            margin-top calc(30% - 180px)
+            max-height 30%
+            object-fit contain
+
         &__txt
-            width 50%
-            margin 0 auto
+            width initial
+            width 400px
+            padding 0
+            margin 40px auto 0
+            // max-height 20%
+            // margin 160px 0 0
+            // padding 0
 
     .main
         margin 0 24px 120px
@@ -119,6 +135,7 @@
     .top
         &__img
             width 55%
+            margin 0
         &__txt
             position absolute
             left 24px

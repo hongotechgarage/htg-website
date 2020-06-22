@@ -121,10 +121,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 24px;
+  align-items: flex-start;
 }
 .page.access .guide img {
   width: calc( (1120px - 64px) /3);
+  height: auto;
   margin-bottom: 32px;
+  object-fit: contain;
 }
 .page.access a.link {
   overflow: hidden;

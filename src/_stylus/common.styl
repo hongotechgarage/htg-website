@@ -57,6 +57,9 @@ h1, h2, h3, h4, h5
   z-index 100
   color txt-color
 
+.logo 
+  width 80px
+
 .menu
   list-style none
   ul
@@ -231,6 +234,8 @@ h1, h2, h3, h4, h5
     height 80px
     padding 0 24px
     width calc(100% - 48px)
+    backdrop-filter blur(12px)
+    -webkit-backdrop-filter blur(24px)
   .logo 
     width 80px
   .footer
@@ -249,6 +254,10 @@ h1, h2, h3, h4, h5
       padding 16px 24px
 
 +sp()
+  .header.active
+    backdrop-filter initial
+    -webkit-backdrop-filter initial
+
   .menu-trigger
     display inline-block
     position fixed 
@@ -257,7 +266,7 @@ h1, h2, h3, h4, h5
   .menu
     display none
     &.active
-      display flex
+      display flex      
     ul 
       z-index 1
       flex-direction column

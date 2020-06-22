@@ -1,14 +1,17 @@
 let menu: HTMLElement = document.getElementById('menu');
+let header: HTMLElement = document.getElementById('header');
 let menuTrigger: HTMLElement = document.getElementById('menu-trigger');
 
 function toggleNav() {
     menuTrigger.addEventListener('click', function () {
         menuTrigger.classList.toggle('active');
         menu.classList.toggle('active');
+        header.classList.toggle('active');
     });
     if (menuTrigger.classList.contains('active')) {
         menuTrigger.classList.remove('active');
         menu.classList.remove('active');
+        header.classList.remove('active');
     }
 }
 toggleNav();
