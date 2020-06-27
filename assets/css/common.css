@@ -254,7 +254,7 @@ h5 {
   }
 }
 @media screen and (max-width: 480px) {
-  .header.active {
+  .header {
     backdrop-filter: initial;
     -webkit-backdrop-filter: initial;
   }

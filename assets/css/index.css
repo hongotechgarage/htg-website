@@ -43,16 +43,8 @@
 .content__ttl {
   font-size: 26px;
 }
-.content:first-child:hover {
-  background: #fff;
-}
-.content:first-child:hover::after {
-  clip-path: inset(0 calc(100% - 64px) calc(100% - 64px) 0);
-  -webkit-clip-path: inset(0 calc(100% - 64px) calc(100% - 64px) 0);
-}
-.content:first-child:hover::before {
-  clip-path: inset(calc(100% - 64px) 0 0 calc(100% - 64px));
-  -webkit-clip-path: inset(calc(100% - 64px) 0 0 calc(100% - 64px));
+.content:first-child {
+  cursor: default;
 }
 .content .link {
   transition: all 0.3s cubic-bezier(0.55, 0.05, 0.22, 0.99);
@@ -129,20 +121,17 @@
 }
 @media screen and (max-width: 1120px) {
   .top {
-    margin: 0 24px;
+    max-width: 100%;
     flex-direction: column;
   }
   .top__img {
     width: 400px;
-    margin-top: calc(30% - 180px);
-    max-height: 30%;
-    object-fit: contain;
+    margin: 120px 0 32px;
   }
   .top__txt {
-    width: initial;
     width: 400px;
     padding: 0;
-    margin: 40px auto 0;
+    margin: 32px 0;
   }
   .main {
     margin: 0 24px 120px;
@@ -150,17 +139,21 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .top {
+    position: relative;
+  }
   .top__img {
     width: 55%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     margin: 0;
   }
   .top__txt {
-    position: absolute;
-    left: 24px;
-    bottom: 24px;
+    margin: auto 0 24px 0;
     text-align: justify;
-    margin: 0;
-    width: 60%;
+    width: calc(100% - 48px);
     line-height: 1.8em;
   }
   .main {
