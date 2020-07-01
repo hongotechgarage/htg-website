@@ -2,6 +2,8 @@
   max-width: 1120px;
   margin: 0 auto;
   padding: 16px 0;
+  font-feature-settings: "palt";
+  letter-spacing: 0.08em;
 }
 .page__ttl {
   text-align: center;
@@ -104,6 +106,7 @@
 }
 .page.project .projects-list {
   padding: 0 0 0 24px;
+  list-style-type: square;
 }
 .page.environment .group {
   margin-bottom: 48px;

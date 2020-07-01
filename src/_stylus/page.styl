@@ -4,6 +4,10 @@
     max-width content-width
     margin 0 auto
     padding 16px 0
+    -moz-font-feature-settings "palt"
+    -webkit-font-feature-settings "palt"
+    font-feature-settings "palt"
+    letter-spacing .08em
     &__ttl
         text-align center
         margin 220px auto 96px
@@ -83,6 +87,7 @@
                     -o-transform rotate(45deg)
         .projects-list
             padding 0 0 0 24px
+            list-style-type square
 
     &.environment
         .group
@@ -90,6 +95,7 @@
             &:last-child
                 margin-bottom 120px
 
+    
         h4 
             font-weight bold
             font-size 12px

@@ -60,6 +60,8 @@ h5 {
   position: fixed;
   z-index: 100;
   color: #262626;
+  font-feature-settings: "palt";
+  letter-spacing: 0.08em;
 }
 .logo {
   width: 80px;
@@ -148,6 +150,8 @@ h5 {
   border-right: 1px solid #262626;
   display: flex;
   flex-wrap: wrap;
+  font-feature-settings: "palt";
+  letter-spacing: 0.08em;
 }
 .footer__part:first-child {
   flex-basis: calc(50% - 40px);

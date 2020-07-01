@@ -23,6 +23,8 @@
 .main {
   margin: 0 auto 120px;
   max-width: 1120px;
+  font-feature-settings: "palt";
+  letter-spacing: 0.08em;
 }
 .content {
   margin: 48px 0;
