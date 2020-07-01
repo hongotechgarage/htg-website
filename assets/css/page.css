@@ -57,6 +57,9 @@
 .page.project .program__item a {
   margin-top: 16px;
 }
+.page.project .program__item .spacing {
+  letter-spacing: 0;
+}
 .page.project .program .link {
   margin-bottom: 0;
 }
