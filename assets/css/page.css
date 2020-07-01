@@ -79,6 +79,7 @@
   border-radius: 4px;
   list-style: none;
   margin: 16px 0;
+  text-align: justify;
 }
 .page.project .ng-ideas {
   padding: 8px 0 8px 24px;
@@ -87,6 +88,7 @@
   list-style: none;
   margin: 8px 0;
   position: relative;
+  text-align: justify;
 }
 .page.project .ng-ideas li::before,
 .page.project .ng-ideas li::after {
@@ -110,6 +112,7 @@
 .page.project .projects-list {
   padding: 0 0 0 24px;
   list-style-type: square;
+  text-align: justify;
 }
 .page.environment .group {
   margin-bottom: 48px;
