@@ -48,6 +48,15 @@ h4,
 h5 {
   font-weight: normal;
 }
+table {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 15px;
+}
+table td {
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+}
 /* for debug */
 .header {
   margin: 0 auto;
