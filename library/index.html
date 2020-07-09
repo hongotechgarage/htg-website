@@ -43,6 +43,7 @@
           </div>
           <div class="group">
             <header class="row">
+              <div><a class="logo" href="./">ガレージ蔵書検索</a></div>
               <div class="searchbox-container">
                 <div class="input-group">
                   <input class="form-control" id="q" type="text">
@@ -50,13 +51,18 @@
               </div>
             </header>
             <section>
+              <aside>
+                <div id="links"></div>
+                <div id="genres"></div>
+                <div id="ratings"></div>
+              </aside>
               <article>
                 <div class="text-right text-muted" id="stats"></div>
                 <hr>
                 <div id="hits"></div>
-                <div class="text-center" id="pagination"></div>
+                <div id="pagination" style="text-align: center; margin-top: 15px; font-size: 20px;"></div>
               </article>
-              <div>powered by<br><a href="https://www.algolia.com/"><img src="./algolialogo.png" width="70%"></a></div>
+              <div style="text-align: right">powered by<a href="https://www.algolia.com/" style="vertical-align: top; margin-left: 7px"><img src="./algolialogo.png" height="18px"></a></div>
             </section>
           </div>
         </main>
