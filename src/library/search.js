@@ -48,29 +48,29 @@ search.addWidget(
   })
 );
 
-search.addWidget(
-  instantsearch.widgets.pagination({
-    container: '#pagination',
-    cssClasses: {
-      root: 'pagination',
-      active: 'active'
-    }
-  })
-);
+// search.addWidget(
+//   instantsearch.widgets.pagination({
+//     container: '#pagination',
+//     cssClasses: {
+//       root: 'pagination',
+//       active: 'active'
+//     }
+//   })
+// );
 
-search.addWidget(
-  instantsearch.widgets.refinementList({
-    container: '#genres',
-    attributeName: 'genre',
-    operator: 'and',
-    limit: 10,
-    cssClasses: {
-      list: 'nav nav-list',
-      count: 'badge pull-right',
-      active: 'active'
-    }
-  })
-);
+// search.addWidget(
+//   instantsearch.widgets.refinementList({
+//     container: '#genres',
+//     attributeName: 'genre',
+//     operator: 'and',
+//     limit: 10,
+//     cssClasses: {
+//       list: 'nav nav-list',
+//       count: 'badge pull-right',
+//       active: 'active'
+//     }
+//   })
+// );
 
 
 
