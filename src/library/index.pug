@@ -4,6 +4,7 @@ html(lang="ja")
     include ../_component/_head
     title HONGO TECH GARAGE | 本郷テックガレージ
     link(href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css" rel="stylesheet")
+    link(href="./search.css" rel="stylesheet")
   body
     include ../_component/_header
     #barba-wrapper
@@ -15,12 +16,10 @@ html(lang="ja")
             h1.jp ガレージ蔵書検索
           .group
             header.row
-              div
-                a.logo(href='./') ガレージ蔵書検索
               .searchbox-container
                 .input-group
-                  input#q.form-control(type='text')
-            section
+                  input#q.form-control(type='text' style="height: 24px; width: 50%; margin-bottom: 15px;")
+            #htg-library-search
               aside
                 #links
                 #genres
@@ -36,4 +35,5 @@ html(lang="ja")
                   img(src='./algolialogo.png', height='18px')
     script(src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js" type="text/javascript")
     script(src="./search.js" type="text/javascript")
+
   include ../_component/_footer

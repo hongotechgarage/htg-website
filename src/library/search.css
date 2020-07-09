@@ -1,0 +1,55 @@
+#htg-library-search article {
+  padding: 10px 0;
+  max-width: 100%;
+  background: #ffffff;
+}
+#htg-library-search article #stats {
+  padding-right: 14px;
+  font-size: 0.8em;
+  line-height: 24px;
+}
+#htg-library-search article #hits {
+  padding: 0 15px;
+}
+#htg-library-search article #hits a {
+  color: #167ac6;
+}
+#htg-library-search article #pagination .pagination a {
+  background: #f8f8f8;
+  padding: 3px 8px;
+  color: #333333;
+  margin-right: 4px;
+}
+#htg-library-search article #pagination .pagination a.active {
+  background: #e8e8e8;
+}
+#htg-library-search article #pagination .pagination a:hover {
+  background: #ebebeb;
+}
+#htg-library-search article .hit {
+  margin-bottom: 10px;
+}
+#htg-library-search article .hit em {
+  font-style: normal;
+  background: #ffffd4;
+  text-decoration: underline;
+}
+#htg-library-search article .hit p em {
+  font-style: normal;
+  background: #ffffd4;
+  text-decoration: underline;
+}
+#htg-library-search article .hit .media-object {
+  height: 130px;
+  width: 130px;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#htg-library-search article .hit .media-heading {
+  color: #167ac6;
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 7px;
+}
