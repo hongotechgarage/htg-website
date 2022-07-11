@@ -10,7 +10,7 @@
   margin: 220px auto 96px;
 }
 .page__ttl .en {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
 }
 .page__ttl .jp {
@@ -44,7 +44,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: calc((1120px - 32px) / 2 - 80px);
   border: 1px solid #262626;
   border-radius: 4px;
   padding: 40px;
@@ -92,7 +91,7 @@
 }
 .page.project .ng-ideas li::before,
 .page.project .ng-ideas li::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 9.2px;
@@ -133,7 +132,7 @@
   align-items: flex-start;
 }
 .page.access .guide img {
-  width: calc((1120px - 64px) / 2);
+  width: calc( (1120px - 64px) /3);
   height: auto;
   margin-bottom: 32px;
   object-fit: contain;
